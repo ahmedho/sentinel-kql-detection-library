@@ -1,0 +1,5 @@
+﻿# Local scratch / CLI output not meant for the repo
+*.local.json
+*.local.yaml
+.env
+az-output/
