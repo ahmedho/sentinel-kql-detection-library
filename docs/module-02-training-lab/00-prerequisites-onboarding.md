@@ -150,15 +150,20 @@ Post-resolution: **20 of 21 telemetry tables ingested**, **20 of 22 detection ru
 
 ## 7. Screenshots referenced
 
-- entity graph view of the correlated multi-stage incident
+- Entity graph view of the correlated multi-stage incident
 
- ![Multistage incident entity graph](../diagrams/module-02/sentinel-training-lab-multistage-incident-entity-graph.png)
-- the incidents queue showing all 6 live incidents
+![sentinel-training-lab-multistage-incident-entity-graph](/diagrams/module-02/sentinel-training-lab-multistage-incident-entity-graph.png)
 
-![Incidents queue in the Defender portal](../diagrams/module-02/sentinel-training-lab-incidents-queue-defender-portal.png)
-- 20 deployed rules in Hunting
+- The incidents queue showing all 6 live incidents
 
-![Custom detection rules list](../diagrams/module-02/sentinel-training-lab-custom-detection-rules-list.png)
+![sentinel-training-lab-incidents-queue-defender-portal](/diagrams/module-02/sentinel-training-lab-incidents-queue-defender-portal.png)
+
+- The 20 deployed rules in Hunting → Custom detection rules
+
+![entinel-training-lab-custom-detection-rules-list](/diagrams/module-02/sentinel-training-lab-custom-detection-rules-list.png)
+
 
 ---
+
+
 
