@@ -7,7 +7,7 @@ Guided learning module — not portfolio material. Deploys `Azure/Azure-Sentinel
 | [00 — Prerequisites & Onboarding](./00-prerequisites-onboarding.md) | ✅ Complete | Manage a security operations environment · Respond to security incidents |
 | [01 — Exploration: Hunting Across Your Data](./01-exploration-hunting.md) | ✅ Complete | Perform threat hunting |
 | [02 — Threat Intelligence: Microsoft Defender Threat Intelligence](./02-threat-intelligence-mdti.md) | ✅ Complete | Manage a security operations environment · Perform threat hunting |
-| 03 — MITRE ATT&CK Coverage | ⬜ Not started | |
+| [03 — MITRE ATT&CK Coverage](./03-mitre-attack-coverage.md) | ✅ Complete | Manage a security operations environment |
 | 04 — Automation Rules | ⬜ Not started | |
 | 05 — Cross-Platform Response Actions (Device Isolation) | ⬜ Not started | |
 | 06 — Port Scan Detection & Threshold Tuning | ⬜ Not started | |
