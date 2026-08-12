@@ -9,7 +9,7 @@ Guided learning module. Deploys `Azure/Azure-Sentinel`'s [Training Lab](https://
 | [02 — Threat Intelligence: Microsoft Defender Threat Intelligence](./02-threat-intelligence-mdti.md) | ✅ Complete | Manage a security operations environment · Perform threat hunting |
 | [03 — MITRE ATT&CK Coverage](./03-mitre-attack-coverage.md) | ✅ Complete | Manage a security operations environment |
 | [04 — Automation Rules](./04-automation-rules.md) | ✅ Complete | Manage a security operations environment |
-| 05 — Cross-Platform Response Actions (Device Isolation) | ⬜ Not started | |
+| [05 — Cross-Platform Response Actions (Device Isolation)](./05-device-isolation-response.md) | ⏭️ Skipped — requires MDE | Respond to security incidents |
 | 06 — Port Scan Detection & Threshold Tuning | ⬜ Not started | |
 | 07 — Okta MFA Factor Manipulation | ⬜ Not started | |
 | 08 — Watchlist Integration | ⬜ Not started | |
