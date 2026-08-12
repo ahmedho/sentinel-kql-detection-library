@@ -1,0 +1,156 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "workspace": {
+            "type": "String"
+        }
+    },
+    "resources": [
+        {
+            "id": "[concat(resourceId('Microsoft.OperationalInsights/workspaces/providers', parameters('workspace'), 'Microsoft.SecurityInsights'),'/AutomationRules/33153332-b693-492d-89c6-94e79913af76')]",
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/33153332-b693-492d-89c6-94e79913af76')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/AutomationRules",
+            "apiVersion": "2025-01-01-preview",
+            "properties": {
+                "displayName": "Escalate log cleared events",
+                "order": 2,
+                "triggeringLogic": {
+                    "isEnabled": true,
+                    "expirationTimeUtc": null,
+                    "triggersOn": "Incidents",
+                    "triggersWhen": "Created",
+                    "conditions": [
+                        {
+                            "conditionType": "Property",
+                            "conditionProperties": {
+                                "propertyName": "IncidentTitle",
+                                "operator": "Contains",
+                                "propertyValues": [
+                                    "Backdoor"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "actions": [
+                    {
+                        "order": 1,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "status": null,
+                            "classification": null,
+                            "classificationReason": null,
+                            "classificationComment": null,
+                            "severity": null,
+                            "owner": null,
+                            "labels": [
+                                {
+                                    "labelName": "defense-evasion",
+                                    "labelType": "User"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "order": 2,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "status": null,
+                            "classification": null,
+                            "classificationReason": null,
+                            "classificationComment": null,
+                            "severity": null,
+                            "owner": null,
+                            "labels": [
+                                {
+                                    "labelName": "persistence",
+                                    "labelType": "User"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "order": 3,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "status": null,
+                            "classification": null,
+                            "classificationReason": null,
+                            "classificationComment": null,
+                            "severity": "High",
+                            "owner": null,
+                            "labels": null
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "id": "[concat(resourceId('Microsoft.OperationalInsights/workspaces/providers', parameters('workspace'), 'Microsoft.SecurityInsights'),'/AutomationRules/2aaa4ded-61c5-4f09-a815-bf17a058fbc2')]",
+            "name": "[concat(parameters('workspace'),'/Microsoft.SecurityInsights/2aaa4ded-61c5-4f09-a815-bf17a058fbc2')]",
+            "type": "Microsoft.OperationalInsights/workspaces/providers/AutomationRules",
+            "apiVersion": "2025-01-01-preview",
+            "properties": {
+                "displayName": "Tag AWS threat incidents",
+                "order": 1,
+                "triggeringLogic": {
+                    "isEnabled": true,
+                    "expirationTimeUtc": null,
+                    "triggersOn": "Incidents",
+                    "triggersWhen": "Created",
+                    "conditions": [
+                        {
+                            "conditionType": "Property",
+                            "conditionProperties": {
+                                "propertyName": "IncidentDescription",
+                                "operator": "Contains",
+                                "propertyValues": [
+                                    "AWS"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "actions": [
+                    {
+                        "order": 1,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "status": null,
+                            "classification": null,
+                            "classificationReason": null,
+                            "classificationComment": null,
+                            "severity": null,
+                            "owner": null,
+                            "labels": [
+                                {
+                                    "labelName": "cloud-threat",
+                                    "labelType": "User"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "order": 2,
+                        "actionType": "ModifyProperties",
+                        "actionConfiguration": {
+                            "status": null,
+                            "classification": null,
+                            "classificationReason": null,
+                            "classificationComment": null,
+                            "severity": null,
+                            "owner": null,
+                            "labels": [
+                                {
+                                    "labelName": "aws",
+                                    "labelType": "User"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

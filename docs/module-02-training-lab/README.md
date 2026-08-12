@@ -1,6 +1,6 @@
 # Module 2 — Sentinel Training Lab
 
-Guided learning module — not portfolio material. Deploys `Azure/Azure-Sentinel`'s [Training Lab](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Microsoft-Sentinel-Training-Lab) and works through its exercises to see real incident mechanics (correlation, entity graphs, playbooks) before building original detections from Module 3 onward.
+Guided learning module. Deploys `Azure/Azure-Sentinel`'s [Training Lab](https://github.com/Azure/Azure-Sentinel/tree/master/Tools/Microsoft-Sentinel-Training-Lab) and works through its exercises to see real incident mechanics (correlation, entity graphs, playbooks) before building original detections from Module 3 onward.
 
 | Doc | Status | SC-200 domain(s) |
 |---|---|---|
@@ -8,7 +8,7 @@ Guided learning module — not portfolio material. Deploys `Azure/Azure-Sentinel
 | [01 — Exploration: Hunting Across Your Data](./01-exploration-hunting.md) | ✅ Complete | Perform threat hunting |
 | [02 — Threat Intelligence: Microsoft Defender Threat Intelligence](./02-threat-intelligence-mdti.md) | ✅ Complete | Manage a security operations environment · Perform threat hunting |
 | [03 — MITRE ATT&CK Coverage](./03-mitre-attack-coverage.md) | ✅ Complete | Manage a security operations environment |
-| 04 — Automation Rules | ⬜ Not started | |
+| [04 — Automation Rules](./04-automation-rules.md) | ✅ Complete | Manage a security operations environment |
 | 05 — Cross-Platform Response Actions (Device Isolation) | ⬜ Not started | |
 | 06 — Port Scan Detection & Threshold Tuning | ⬜ Not started | |
 | 07 — Okta MFA Factor Manipulation | ⬜ Not started | |
@@ -27,3 +27,4 @@ Guided learning module — not portfolio material. Deploys `Azure/Azure-Sentinel
 - `S8` and `E7` detection rules (from the packaged deployment) depend on Data Lake KQL jobs — deferred to Exercise 11 / Module 12, not yet resolved.
 - `CrowdStrikeCases` telemetry table failed ingestion due to an upstream invalid-stream bug in the packaged template — unresolved, low impact (1 of 21 tables).
 - The native MDTI data connector requires business verification (`verification.microsoft.com`) not achievable on this subscription — structural, permanent limitation, not revisited. Exercise 2 completed via a manually-seeded TI indicator instead.
+- **All 20 deployed detection rules use short, hardcoded `ago()` lookback windows (1–4h) against telemetry whose `TimeGenerated` was fixed at ingestion on 6 August.** As of Exercise 4 (12 August), none can fire via their normal schedule or manual Run — confirmed for `Lab Stage 7`, logic and telemetry both verified sound via a widened test query. Expect this to affect any remaining exercise that assumes a rule can be freshly triggered; validate via widened-window test queries rather than relying on live incident creation going forward, unless the rules are individually re-edited or telemetry is re-ingested.
