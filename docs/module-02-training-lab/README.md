@@ -11,7 +11,7 @@ Guided learning module. Deploys `Azure/Azure-Sentinel`'s [Training Lab](https://
 | [04 — Automation Rules](./04-automation-rules.md) | ✅ Complete | Manage a security operations environment |
 | [05 — Cross-Platform Response Actions (Device Isolation)](./05-device-isolation-response.md) | ⏭️ Skipped — requires MDE | Respond to security incidents |
 | [06 — Port Scan Detection & Threshold Tuning](./06-port-scan-threshold-tuning.md) | ✅ Complete | Manage a security operations environment |
-| 07 — Okta MFA Factor Manipulation | ⬜ Not started | |
+| [07 — Okta MFA Factor Manipulation](./07-okta-mfa-manipulation.md) | ✅ Complete | Perform threat hunting · Manage a security operations environment |
 | 08 — Watchlist Integration | ⬜ Not started | |
 | 09 — Cost Management & Ingestion Analysis | ⬜ Not started | |
 | 10 — Table Management: Tiers & Retention | ⬜ Not started | |
