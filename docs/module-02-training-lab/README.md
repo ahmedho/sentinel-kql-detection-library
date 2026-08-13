@@ -13,7 +13,7 @@ Guided learning module. Deploys `Azure/Azure-Sentinel`'s [Training Lab](https://
 | [06 — Port Scan Detection & Threshold Tuning](./06-port-scan-threshold-tuning.md) | ✅ Complete | Manage a security operations environment |
 | [07 — Okta MFA Factor Manipulation](./07-okta-mfa-manipulation.md) | ✅ Complete | Perform threat hunting · Manage a security operations environment |
 | [08 — Watchlist Integration](./08-watchlist-integration.md) | ✅ Complete | Manage a security operations environment |
-| 09 — Cost Management & Ingestion Analysis | ⬜ Not started | |
+| [09 — Cost Management & Ingestion Analysis](./09-cost-management.md) | ✅ Complete | Manage a security operations environment |
 | 10 — Table Management: Tiers & Retention | ⬜ Not started | |
 | 11 — Data Lake KQL Jobs | ⬜ Not started | |
 | 12 — Data Lake vs Real-Time Detection | ⬜ Not started | |
